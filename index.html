@@ -93,17 +93,38 @@
         <div class="form-section-wrap">
           <img src="./img/bag.png" alt="Woman" class="woman-image" />
           <div class="form-content">
-            <form class="form">
+            <form class="form" method="POST">
               <div class="form-title">Let’s make this official</div>
-              <input type="text" class="form-input" placeholder="Name" />
-              <input type="email" class="form-input" placeholder="E-mail" />
+
+              <input
+                type="text"
+                class="form-input"
+                name="name"
+                placeholder="Name"
+                required
+              />
+
+              <input
+                type="email"
+                class="form-input"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
+
               <div class="form-accept">
                 <label>
-                  <input type="checkbox" class="form-checkbox" />
+                  <input
+                    type="checkbox"
+                    class="form-checkbox"
+                    name="privacy"
+                    required
+                  />
                   I accept Privacy policy
                 </label>
               </div>
-              <button class="form-button">Registration</button>
+
+              <button type="submit" class="form-button">Registration</button>
             </form>
           </div>
         </div>
