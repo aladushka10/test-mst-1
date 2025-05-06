@@ -1,0 +1,153 @@
+.first_screen {
+  background-image: url(../img/first-screen.png);
+  background-color: rgb(24, 23, 23);
+  padding: 100px 0;
+  height: calc(100vh - 75px);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+}
+.first_screen-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -15px;
+}
+.first_screen-heading {
+  width: 400px;
+  margin: 0 15px;
+}
+
+.bag-it {
+  font-family: "Roboto";
+  font-size: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 42px;
+}
+.bag-it::after {
+  content: "BAG";
+  display: inline;
+  font-family: "Roboto";
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ec7979;
+}
+.first_screen-title {
+  font-family: "Raleway";
+  font-size: 36px;
+  font-weight: 400;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 34px;
+}
+.first_screen-title::after {
+  content: "";
+  display: inline-block;
+  width: 64px;
+  height: 1px;
+  background-color: #fff;
+}
+.first_screen-list-container {
+  margin: 0 auto 70px;
+}
+.first_screen-list {
+}
+.first_screen-list__item {
+  font-family: "Raleway";
+  font-size: 18px;
+  font-weight: 400;
+
+  color: #fff;
+  margin-bottom: 25px;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.first_screen-list__item span {
+  font-size: 28px;
+  color: #ec7979;
+}
+
+.first_screen-list__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/item.svg");
+  fill: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.first_screen-button {
+  font-family: "Raleway";
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  border: 1px #c4c4c4 solid;
+  width: 250px;
+  height: 50px;
+  padding: 11px 0;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+.first_screen-button:hover {
+  transition: 0.2s;
+  background-color: #ec7979;
+}
+
+@media (max-width: 970px) {
+  .first_screen {
+    height: calc(100vh - 65px);
+    padding: 30px 0;
+  }
+  .first_screen::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+  }
+  .bag-it {
+    font-size: 40px;
+  }
+
+  .first_screen-wrap {
+    flex-direction: column;
+  }
+  .first_screen-heading {
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  .first_screen-title {
+    margin: 0 auto 34px;
+    font-size: 30px;
+  }
+  .first_screen-button {
+    margin: 0 auto 60px;
+  }
+}
+
+@media (max-width: 430px) {
+  .first_screen-heading {
+    width: 300px;
+    margin: 0 15px;
+  }
+  .first_screen-list__item span {
+    font-size: 20px;
+  }
+}

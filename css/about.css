@@ -1,0 +1,126 @@
+.about {
+  background-image: url(../img/about_1.png), url(../img/about_2.png);
+  background-color: rgb(38, 37, 37);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, right center;
+  background-size: 400px 100%, 400px 100%;
+  padding: 0 5%;
+  height: calc(100vh - 75px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  z-index: 1;
+}
+
+.about-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 450px;
+  margin: auto;
+}
+
+.about-list {
+  margin-bottom: 20px;
+}
+
+.about-list__item {
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 400;
+  margin: 0 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  position: relative;
+  padding: 20px;
+  padding-left: 40px;
+  border-bottom: 1px grey solid;
+}
+.about-list__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/item2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.about-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: "Raleway";
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  border: 1px #c4c4c4 solid;
+  width: 95%;
+  height: 60px;
+  padding: 11px 0;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+.about-button:hover {
+  transition: 0.2s;
+  background-color: #ec7979;
+}
+
+@media (max-width: 1240px) {
+  .about-wrap {
+  }
+  .about-wrap {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+  }
+}
+
+@media (max-width: 850px) {
+  .about {
+    height: calc(100vh - 65px);
+    background-image: url(../img/about_1.png);
+  }
+}
+
+@media (max-width: 615px) {
+  .about {
+    background-image: url(../img/about_1.png);
+    background-position: center;
+  }
+}
+
+@media (max-width: 505px) {
+  .about-list__item {
+    padding: 10px;
+    margin-bottom: 5px;
+    padding-left: 30px;
+    font-size: 12px;
+  }
+  .about-button {
+    height: 25px;
+    font-size: 14px;
+  }
+  .about-wrap {
+    width: 270px;
+  }
+}
+@media (max-width: 360px) {
+  .about-list__item {
+    padding: 0px;
+    margin-bottom: 5px;
+    padding-left: 30px;
+  }
+  .about-list {
+    margin-bottom: 10px;
+  }
+}

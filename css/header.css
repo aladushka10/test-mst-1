@@ -1,0 +1,79 @@
+.header {
+  background-color: rgb(24, 23, 23);
+  padding: 20px 0;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+}
+.header.scrolled {
+  background-color: rgb(0, 0, 0);
+}
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -15px;
+}
+.logo {
+  font-family: "Raleway";
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 15px;
+}
+.logo::after {
+  content: "BAG";
+  color: #ec7979;
+}
+.header-navigation {
+  margin: 0 15px;
+}
+.navigation-list {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation-link {
+  font-family: "Open Sans";
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.navigation-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+  padding-bottom: 2px;
+  border-bottom: 1px solid #b85858;
+}
+.navigation-list__item:hover {
+  transition: 0.2s;
+  transform: scale(1.2);
+}
+
+@media (max-width: 580px) {
+  .logo {
+    font-size: 20px;
+  }
+  .navigation-list {
+    width: 250px;
+  }
+  .navigation-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 390px) {
+  .logo {
+    font-size: 20px;
+  }
+  .navigation-list {
+    width: 180px;
+  }
+  .navigation-list__item:last-child {
+    display: none;
+  }
+  .navigation-link {
+    font-size: 14px;
+  }
+}
